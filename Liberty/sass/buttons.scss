@@ -1,0 +1,52 @@
+@import 'colors';
+
+.btn {
+    cursor: pointer;
+    border: none;
+    position: relative;
+    transition: 0.2s;
+}
+
+.btn__primary {
+    background-color: $purple;
+    color: $white;
+    height: 50px;
+    border-radius: 25px;
+    font-weight: 500;
+    position: relative;
+    &:hover {
+        color: $purple;
+        background-color: $white;
+    }
+}
+
+.btn__secondary {
+    border-radius: 20px;
+    font-weight: 500;
+    &:hover {
+    background-color: $purple;
+    }
+}
+
+.btn__slide {
+    height: 50px;
+    width: 50px;
+    background-color: $white;
+    border-radius: 50%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    i {
+        color: $purple;
+        font-size: 18px;
+    }
+    &:hover {
+        background-color: $purple;
+        i{color: $white;}
+    }
+    &:focus {
+        outline-color: $purple;
+    }
+}

@@ -1,0 +1,135 @@
+nav {
+  width: 85%;
+  height: 100px;
+  background: rgb(253, 254, 252);
+  margin: 20px auto;
+  padding: 0 20px;
+  border-radius: 50px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s width ease-in-out;
+}
+nav .menu {
+  display: none;
+}
+nav ul {
+  width: 600px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav .link {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+nav .link a {
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+}
+nav .link.link__active, nav .link:hover {
+  background: rgb(116, 81, 252);
+}
+nav .link.link__active a, nav .link:hover a {
+  color: rgb(253, 254, 252);
+}
+
+.scroll {
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  z-index: 100;
+  border-radius: 0;
+  position: fixed;
+  transition: 0.5s margin ease-out;
+}
+.scroll img {
+  transform: scale(0.75);
+  background-color: rgb(253, 254, 252);
+}
+
+@media (max-width: 960px) {
+  nav {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    z-index: 10;
+  }
+  nav .menu {
+    display: block;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background: transparent;
+    transition: 0.2s ease-in-out;
+  }
+  nav .menu:hover {
+    background-color: rgb(116, 81, 252);
+  }
+  nav .menu:hover i {
+    color: rgb(253, 254, 252);
+  }
+  nav .menu i {
+    color: rgb(116, 81, 252);
+    font-size: 36px;
+  }
+  nav ul {
+    width: 90%;
+    height: 250px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 254, 252);
+    outline: rgb(116, 81, 252);
+    z-index: -1;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease-in-out;
+  }
+  nav ul.toggle {
+    transform: translateY(0);
+    z-index: 1;
+  }
+  nav ul .link {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    border-bottom: 0.5px solid rgb(209, 209, 209);
+  }
+  nav ul .link a {
+    width: 100%;
+  }
+  nav ul .linklink__active {
+    background-color: rgb(253, 254, 252);
+    color: rgb(116, 81, 252);
+  }
+  nav.scroll {
+    height: 100px;
+    z-index: 100;
+    background-color: rgb(253, 254, 252);
+  }
+  nav.scroll > {
+    background-color: rgb(253, 254, 252);
+  }
+}
+@media (max-width: 428px) {
+  nav img {
+    height: 40px;
+    width: 150px;
+  }
+  nav ul {
+    width: 80%;
+    margin-left: -20px;
+  }
+}/*# sourceMappingURL=nav.css.map */

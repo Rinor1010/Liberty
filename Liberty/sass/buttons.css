@@ -1,0 +1,52 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  transition: 0.2s;
+}
+
+.btn__primary {
+  background-color: rgb(116, 81, 252);
+  color: rgb(253, 254, 252);
+  height: 50px;
+  border-radius: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.btn__primary:hover {
+  color: rgb(116, 81, 252);
+  background-color: rgb(253, 254, 252);
+}
+
+.btn__secondary {
+  border-radius: 20px;
+  font-weight: 500;
+}
+.btn__secondary:hover {
+  background-color: rgb(116, 81, 252);
+}
+
+.btn__slide {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(253, 254, 252);
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+.btn__slide i {
+  color: rgb(116, 81, 252);
+  font-size: 18px;
+}
+.btn__slide:hover {
+  background-color: rgb(116, 81, 252);
+}
+.btn__slide:hover i {
+  color: rgb(253, 254, 252);
+}
+.btn__slide:focus {
+  outline-color: rgb(116, 81, 252);
+}/*# sourceMappingURL=buttons.css.map */

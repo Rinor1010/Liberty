@@ -1,0 +1,18 @@
+.card {
+  background: rgb(40, 43, 47);
+  border: 1px solid rgb(64, 66, 69);
+  border-radius: 20px;
+}
+
+.line {
+  width: calc(100% - 30px);
+  height: 3px;
+  background-color: rgb(253, 254, 252);
+  position: absolute;
+  bottom: 2px;
+  left: 15px;
+  border-radius: 2px;
+}
+.line.line__secondary {
+  background-color: rgb(116, 81, 252);
+}/*# sourceMappingURL=cards.css.map */

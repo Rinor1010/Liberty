@@ -1,0 +1,21 @@
+@import 'colors';
+
+.card {
+    background: $darkgray;
+    border: 1px solid $gray;
+    border-radius: 20px;
+}
+
+.line {
+    width: calc(100% - 30px);
+    height: 3px;
+    background-color: $white;
+    position: absolute;
+    bottom: 2px;
+    left: 15px;
+    border-radius: 2px;
+    &.line__secondary {
+        background-color: $purple;
+    }
+}
+
