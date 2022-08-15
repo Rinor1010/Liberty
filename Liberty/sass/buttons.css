@@ -4,7 +4,6 @@
   position: relative;
   transition: 0.2s;
 }
-
 .btn__primary {
   background-color: rgb(116, 81, 252);
   color: rgb(253, 254, 252);
@@ -17,7 +16,6 @@
   color: rgb(116, 81, 252);
   background-color: rgb(253, 254, 252);
 }
-
 .btn__secondary {
   border-radius: 20px;
   font-weight: 500;
@@ -25,7 +23,6 @@
 .btn__secondary:hover {
   background-color: rgb(116, 81, 252);
 }
-
 .btn__slide {
   height: 50px;
   width: 50px;

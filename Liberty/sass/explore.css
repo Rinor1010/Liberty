@@ -4,7 +4,6 @@
   position: relative;
   transition: 0.2s;
 }
-
 .btn__primary {
   background-color: rgb(116, 81, 252);
   color: rgb(253, 254, 252);
@@ -17,7 +16,6 @@
   color: rgb(116, 81, 252);
   background-color: rgb(253, 254, 252);
 }
-
 .btn__secondary {
   border-radius: 20px;
   font-weight: 500;
@@ -25,7 +23,6 @@
 .btn__secondary:hover {
   background-color: rgb(116, 81, 252);
 }
-
 .btn__slide {
   height: 50px;
   width: 50px;
@@ -230,9 +227,215 @@ nav .link.link__active a, nav .link:hover a {
   color: rgb(253, 254, 252);
 }
 
+.btn {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  transition: 0.2s;
+}
+.btn__primary {
+  background-color: rgb(116, 81, 252);
+  color: rgb(253, 254, 252);
+  height: 50px;
+  border-radius: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.btn__primary:hover {
+  color: rgb(116, 81, 252);
+  background-color: rgb(253, 254, 252);
+}
+.btn__secondary {
+  border-radius: 20px;
+  font-weight: 500;
+}
+.btn__secondary:hover {
+  background-color: rgb(116, 81, 252);
+}
+.btn__slide {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(253, 254, 252);
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+.btn__slide i {
+  color: rgb(116, 81, 252);
+  font-size: 18px;
+}
+.btn__slide:hover {
+  background-color: rgb(116, 81, 252);
+}
+.btn__slide:hover i {
+  color: rgb(253, 254, 252);
+}
+.btn__slide:focus {
+  outline-color: rgb(116, 81, 252);
+}
+
+nav {
+  width: 85%;
+  height: 100px;
+  background: rgb(253, 254, 252);
+  margin: 20px auto;
+  padding: 0 20px;
+  border-radius: 50px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s width ease-in-out;
+}
+nav .menu {
+  display: none;
+}
+nav ul {
+  width: 600px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav .link {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+nav .link a {
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+}
+nav .link.link__active, nav .link:hover {
+  background: rgb(116, 81, 252);
+}
+nav .link.link__active a, nav .link:hover a {
+  color: rgb(253, 254, 252);
+}
+
+.scroll {
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  z-index: 100;
+  border-radius: 0;
+  position: fixed;
+  transition: 0.5s margin ease-out;
+}
+.scroll img {
+  transform: scale(0.75);
+  background-color: rgb(253, 254, 252);
+}
+
+@media (max-width: 960px) {
+  nav {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    z-index: 10;
+  }
+  nav .menu {
+    display: block;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background: transparent;
+    transition: 0.2s ease-in-out;
+  }
+  nav .menu:hover {
+    background-color: rgb(116, 81, 252);
+  }
+  nav .menu:hover i {
+    color: rgb(253, 254, 252);
+  }
+  nav .menu i {
+    color: rgb(116, 81, 252);
+    font-size: 36px;
+  }
+  nav ul {
+    width: 90%;
+    height: 250px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 254, 252);
+    outline: rgb(116, 81, 252);
+    z-index: -1;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease-in-out;
+  }
+  nav ul.toggle {
+    transform: translateY(0);
+    z-index: 1;
+  }
+  nav ul .link {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    border-bottom: 0.5px solid rgb(209, 209, 209);
+  }
+  nav ul .link a {
+    width: 100%;
+  }
+  nav ul .linklink__active {
+    background-color: rgb(253, 254, 252);
+    color: rgb(116, 81, 252);
+  }
+  nav.scroll {
+    height: 100px;
+    z-index: 100;
+    background-color: rgb(253, 254, 252);
+  }
+  nav.scroll > {
+    background-color: rgb(253, 254, 252);
+  }
+}
+@media (max-width: 428px) {
+  nav img {
+    height: 40px;
+    width: 150px;
+  }
+  nav ul {
+    width: 80%;
+    margin-left: -20px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   display: flex;
   flex-direction: column;
+}
+
+.scroll {
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  z-index: 100;
+  border-radius: 0;
+  position: fixed;
+  transition: 0.5s margin ease-out;
+}
+.scroll img {
+  transform: scale(0.75);
+  background-color: rgb(253, 254, 252);
 }
 
 header {
@@ -263,39 +466,67 @@ header .text p a {
   color: rgb(253, 254, 252);
   text-decoration: none;
 }
-
-.scroll {
-  height: 70px;
-  width: 100%;
-  margin: 0;
-  z-index: 100;
-  border-radius: 0;
-  position: fixed;
-  transition: 0.5s margin ease-out;
+header .text .text__buttons {
+  max-width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.scroll img {
-  transform: scale(0.75);
-  background-color: rgb(253, 254, 252);
+header .text .text__buttons .btn {
+  height: 50px;
+  width: 200px;
+  font-size: 16px;
+}
+header .text .text__buttons .btn__secondary {
+  background-color: transparent;
+  color: rgb(253, 254, 252);
+  border-radius: 25px;
+  border: 2px solid rgb(116, 81, 252);
+}
+header .text .text__buttons .btn__secondary:hover {
+  background-color: rgb(116, 81, 252);
+}
+header .text .text__buttons .btn__secondary .line {
+  bottom: 0px;
+}
+
+@media (max-width: 550px) {
+  .text__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer {
+  width: 100%;
+  height: 10vh;
+  padding: 0 20px;
+  background: url("./images/main-bg.jpg");
+  color: rgb(253, 254, 252);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .discover {
   width: 100%;
-  height: 0vh;
+  height: 50vh;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background: url("./images/dark-bg.jpg");
 }
 .discover__slide {
   height: 700px;
   width: 100%;
-  position: relative;
-  top: -30vh;
+  position: absolute;
   display: flex;
   align-items: center;
   overflow: hidden;
   z-index: 10;
   margin-left: 10px;
+  margin-bottom: 160px;
 }
 .discover__slide .buttons {
   width: 95%;
@@ -330,25 +561,29 @@ header .text p a {
   border-radius: 20px;
 }
 .discover #slider .slide__container .slide .card {
-  width: 250px;
-  height: 150px;
-  padding: 20px;
+  width: 290px;
+  height: 170px;
+  padding: 40px;
   position: relative;
-  bottom: 200px;
-  right: -150px;
+  bottom: 220px;
+  margin-left: 150px;
   color: rgb(253, 254, 252);
   display: flex;
   gap: 25px;
   flex-direction: column;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  justify-content: center;
+  opacity: 0.9;
+  transform: translateX(120%);
+  transition: transform 0.4s ease-in-out;
 }
 .discover #slider .slide__container .slide .card h2 {
+  opacity: 1;
   font-size: 20px;
 }
 .discover #slider .slide__container .slide .card .artist__info {
   display: flex;
   gap: 20px;
+  opacity: 1;
 }
 .discover #slider .slide__container .slide .card .artist__info img {
   height: 40px;
@@ -365,259 +600,550 @@ header .text p a {
   color: rgb(116, 81, 252);
 }
 .discover #slider .slide__container .slide:hover .card {
-  opacity: 1;
+  transform: translateX(0);
 }
 
-.search__for--nfts {
-  height: 1800px;
-  background: url("./images/dark-bg.jpg");
-}
-.search__for--nfts .text__label {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 450px;
-}
-.search__for--nfts .text__label .items {
-  color: rgb(253, 254, 252);
-  font-size: 20px;
-}
-.search__for--nfts .text__label .items span {
-  color: rgb(116, 81, 252);
-}
-
-.inputs__one--button * {
-  background: transparent;
-  border-radius: 20px;
-  color: rgb(253, 254, 252);
-  margin: 10px;
-  padding: 10px 20px 10px 10px;
-  background-color: rgb(27, 27, 27);
-  border: 1px solid rgb(64, 66, 69);
-}
-.inputs__one--button *::-moz-placeholder {
+.discover__items {
+  width: 100%;
+  height: 240vh;
+  height: 180vh;
+  padding: 40px;
+  background: url("./images/dark-bg.jpg") center center/cover;
   color: rgb(253, 254, 252);
 }
-.inputs__one--button *:-ms-input-placeholder {
-  color: rgb(253, 254, 252);
-}
-.inputs__one--button *::placeholder {
-  color: rgb(253, 254, 252);
-}
-
-.search {
-  color: rgb(253, 254, 252);
-  font-size: larger;
-  padding: 10px 20px;
-  background-color: rgb(116, 81, 252);
-  border-radius: 50px;
-  border: 1px solid rgb(116, 81, 252);
-  font-weight: 500;
+.discover__items__text {
   position: relative;
-  cursor: pointer;
-}
-.search:hover {
-  background-color: rgb(253, 254, 252);
-  color: rgb(116, 81, 252);
-  transition: 0.2s;
-}
-
-.double {
-  color: rgb(253, 254, 252);
-  background: rgb(116, 81, 252);
-  border-radius: 30px;
+  max-width: 90%;
+  height: 100px;
   margin: auto;
-  margin-top: 85px;
-  padding: 10px 20px;
-}
-
-.nft__cards {
-  max-width: 95%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  color: rgb(253, 254, 252);
-  margin: auto;
-  margin-top: 50px;
-}
-.nft__cards .double__items {
-  width: 45%;
-  height: 550px;
-  border: 1px solid rgb(64, 66, 69);
-  background: rgb(40, 43, 47);
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.nft__cards .double__items__div {
-  margin-bottom: 230px;
-  display: flex;
-  flex-direction: column;
-}
-.nft__cards .double__items .liberty__artist--images {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.nft__cards .double__items .liberty__artist--images img {
-  border-radius: 50%;
-  margin-top: 30px;
-}
-.nft__cards .double__items .silver__pink--images {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.nft__cards .double__items .silver__pink--images img {
-  width: 270px;
-  height: 230px;
-  border-radius: 20px;
-}
-.nft__cards .double__items .mutant__other--half {
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
 }
-.nft__cards .double__items .mutant__other--half .mutant {
-  margin-left: 30px;
-}
-.nft__cards .double__items .mutant__other--half .half {
-  margin-right: 160px;
-}
-.nft__cards .double__items .eight {
+.discover__items__text__header {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 }
-
-.details {
-  color: rgb(253, 254, 252);
-  font-size: larger;
-  padding: 15px 20px;
+.discover__items__text__header .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 2px;
   background-color: rgb(116, 81, 252);
-  border-radius: 50px;
-  border: 1px solid rgb(116, 81, 252);
-  font-weight: 500;
-  position: relative;
-  cursor: pointer;
-  margin-top: 100px;
-  margin-left: 38%;
 }
-.details:hover {
-  background-color: rgb(253, 254, 252);
+.discover__items__text__header h1 {
+  font-size: 32px;
+}
+.discover__items__text__header h1 span {
   color: rgb(116, 81, 252);
-  transition: 0.2s;
 }
-
-.same__nft--cards {
-  position: relative;
-  width: 22.5%;
-  height: 550px;
-  border: 1px solid rgb(64, 66, 69);
-  background: rgb(40, 43, 47);
+.discover__items__text__search {
+  right: 0;
+  display: flex;
+  gap: 20px;
+}
+.discover__items__text__search input,
+.discover__items__text__search select {
+  background-color: transparent;
+  width: 240px;
+  height: 50px;
+  padding: 15px 20px;
+  border: 2px solid rgb(64, 66, 69);
   border-radius: 25px;
+  font-size: 14px;
   color: rgb(253, 254, 252);
 }
-.same__nft--cards .liberty__artist {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.same__nft--cards .liberty__artist img {
-  border-radius: 50%;
-  margin-top: 30px;
-}
-.same__nft--cards .dna {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.same__nft--cards .dna img {
-  width: 270px;
-  height: 230px;
-  border-radius: 20px;
-}
-.same__nft--cards .genesis {
-  margin: 30px;
-}
-.same__nft--cards .line {
-  position: relative;
-  left: 10px;
-  width: 100%;
-  height: 1px;
-  opacity: 0.5;
-}
-.same__nft--cards .bid__end {
-  display: flex;
-  justify-content: space-around;
-}
-.same__nft--cards .details {
-  color: rgb(253, 254, 252);
-  font-size: larger;
-  padding: 15px 20px;
-  background-color: rgb(116, 81, 252);
-  border-radius: 50px;
-  border: 1px solid rgb(116, 81, 252);
-  font-weight: 500;
-  position: relative;
-  cursor: pointer;
-  margin-top: 70px;
-  margin-left: 27%;
-}
-.same__nft--cards .details:hover {
-  background-color: rgb(253, 254, 252);
-  color: rgb(116, 81, 252);
-  transition: 0.2s;
-}
-
-.our__top--sellers {
-  height: 565px;
-  background: url("./images/main-bg.jpg");
+.discover__items__text__search input::-moz-placeholder, .discover__items__text__search select::-moz-placeholder {
   color: rgb(253, 254, 252);
 }
-.our__top--sellers h1 {
-  text-align: center;
-  font-size: 30px;
-  margin-top: 100px;
+.discover__items__text__search input:-ms-input-placeholder, .discover__items__text__search select:-ms-input-placeholder {
+  color: rgb(253, 254, 252);
 }
-.our__top--sellers .twelve__artist {
+.discover__items__text__search input::placeholder,
+.discover__items__text__search select::placeholder {
+  color: rgb(253, 254, 252);
+}
+.discover__items__text__search select {
+  width: 160px;
+  padding: 10px;
+}
+.discover__items__text__search select option {
+  background-color: rgb(40, 43, 47);
+}
+.discover__items__text__search button {
+  width: 120px;
+  font-size: 16px;
+}
+.discover__items .cards {
+  max-width: 95%;
+  margin: 40px auto;
   display: flex;
   flex-wrap: wrap;
-  max-width: 95%;
-  justify-content: center;
-  align-items: center;
+  gap: 35px;
 }
-.our__top--sellers .twelve__artist .liberty {
-  margin-top: 50px;
-  margin-left: 100px;
-}
-.our__top--sellers .twelve__artist .first {
+.discover__items .cards .card {
+  width: 312px;
+  position: relative;
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 30px 20px;
 }
-.our__top--sellers .twelve__artist .first .number {
+.discover__items .cards .card .image {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  position: relative;
+  gap: 20px;
+}
+.discover__items .cards .card .image .author {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  top: 45px;
+}
+.discover__items .cards .card .image .nft {
+  width: 240px;
+  height: 220px;
+  border-radius: 25px;
+}
+.discover__items .cards .card .image h3 {
   font-size: 20px;
 }
-.our__top--sellers .twelve__artist .first img {
-  border-radius: 50%;
+.discover__items .cards .card .line {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  margin: 15px 0 0 0;
 }
-.our__top--sellers .twelve__artist .first__four {
-  width: 55px;
-  height: 55px;
+.discover__items .cards .card .info {
+  display: flex;
+  justify-content: start;
+  gap: 50px;
+  margin: 25px 0;
+}
+.discover__items .cards .card .info h3 {
+  text-align: start;
+  font-size: 20px;
+}
+.discover__items .cards .card button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 140px;
+  height: 50px;
+  font-size: 16px;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.discover__items .cards .card button .line {
+  position: absolute;
+  width: calc(100% - 30px);
+  top: 31px;
+  left: 15px;
+  height: 3px;
+  opacity: 1;
+}
+.discover__items .cards .double {
+  width: 660px;
+  position: relative;
+}
+.discover__items .cards .double .btn__primary {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 140px;
+  height: 50px;
+  font-size: 16px;
+}
+.discover__items .cards .double .btn__primary:nth-child(1) {
+  width: 110px;
+  height: 40px;
+  font-size: 14px;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.discover__items .cards .double .images {
+  display: flex;
+  justify-content: space-between;
+}
+.discover__items .cards .double .images .nft {
+  width: 280px;
+  height: 220px;
+  border-radius: 25px;
 }
 
-footer {
-  background: url("./images/main-bg.jpg");
-  height: 100px;
+.sellers {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  padding: 50px;
+  background: url("./images/main-bg.jpg") center center/cover;
   color: rgb(253, 254, 252);
+}
+.sellers__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 50px 20px;
+}
+.sellers__header .line {
+  position: relative;
+  width: 140px;
+  height: 2px;
+}
+.sellers__header h1 {
+  font-size: 32px;
   text-align: center;
+}
+.sellers__list {
+  max-width: 90%;
+  gap: 40px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sellers__list__profile {
+  margin-right: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+}
+.sellers__list__profile:nth-child(10), .sellers__list__profile:nth-child(11), .sellers__list__profile:nth-child(12) {
+  margin-left: -13px;
+}
+.sellers__list__profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.sellers__list__profile h2 {
+  font-size: 20px;
+}
+.sellers__list__profile p {
+  font-size: 14px;
+}
+
+@media (max-width: 1500px) {
+  .discover #slider .slide__container {
+    width: 415px;
+  }
+  .discover #slider .slide__container .slide {
+    height: 440px;
+    width: 395px;
+  }
+  .discover #slider .slide__container .slide .card {
+    width: 220px;
+    height: 150px;
+  }
+  .discover #slider .slide__container .slide img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover__items {
+    height: 240vh;
+  }
+  .discover__items__text {
+    margin: 20px auto;
+    gap: 20px;
+  }
+  .discover__items__text__header {
+    gap: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .discover #slider .slide__container {
+    margin-left: -5px;
+    width: 390px;
+  }
+  .discover #slider .slide__container .slide {
+    height: 440px;
+    width: 370px;
+  }
+  .discover #slider .slide__container .slide .card {
+    width: 220px;
+    height: 150px;
+  }
+  .discover #slider .slide__container .slide img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover__items {
+    height: 310vh;
+  }
+  .discover__items .cards {
+    max-width: 90%;
+  }
+}
+@media (max-width: 960px) {
+  .sellers {
+    height: 100vh;
+  }
+}
+@media (max-width: 900px) {
+  .discover__items {
+    width: 100%;
+    height: 350vh;
+  }
+  .discover__items__text {
+    height: 350px;
+  }
+  .discover__items__text__search {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .discover__items__text__search input,
+.discover__items__text__search select {
+    width: 100%;
+  }
+  .discover__items .cards {
+    max-width: 100%;
+  }
+  .sellers__list {
+    max-width: 95%;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .discover__slide .buttons {
+    width: 98%;
+    margin-left: 0;
+    top: 60%;
+  }
+  .discover #slider .slide__container {
+    width: 720px;
+    margin-right: 10px;
+  }
+  .discover #slider .slide__container .slide {
+    height: 540px;
+    width: 700px;
+  }
+  .discover #slider .slide__container .slide .card {
+    width: 220px;
+    height: 150px;
+    margin-top: -100px;
+    transform: translateX(-170%);
+  }
+  .discover #slider .slide__container .slide img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover #slider .slide__container .slide:hover .card {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 700px) {
+  .discover #slider .slide__container {
+    width: 580px;
+    margin-right: 5px;
+  }
+  .discover #slider .slide__container .slide {
+    height: 540px;
+    width: 550px;
+  }
+  .discover #slider .slide__container .slide .card {
+    width: 220px;
+    height: 150px;
+    margin-top: 20px;
+    transform: translateX(-170%);
+  }
+  .discover #slider .slide__container .slide img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover #slider .slide__container .slide:hover .card {
+    transform: translateX(-50%);
+  }
+  .discover__items {
+    height: 790vh;
+  }
+  .discover__items .cards {
+    width: 95%;
+    padding: 10px 0;
+  }
+  .discover__items .cards .card {
+    width: 100%;
+  }
+  .discover__items .cards .card .image {
+    width: 100%;
+  }
+  .discover__items .cards .card .image .nft {
+    width: 100%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover__items .cards .card .info {
+    gap: 120px;
+  }
+  .discover__items .cards .double .images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .discover__items .cards .double .info {
+    gap: 50px;
+  }
+  .sellers__list {
+    max-width: 100%;
+  }
+  .sellers__list__profile {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .discover__slide .buttons {
+    width: 98%;
+    margin-left: 0;
+    top: 47%;
+  }
+  .discover #slider .slide__container {
+    width: 380px;
+    margin-right: 5px;
+  }
+  .discover #slider .slide__container .slide {
+    height: 540px;
+    width: 360px;
+  }
+  .discover #slider .slide__container .slide .card {
+    width: 220px;
+    height: 150px;
+    margin-top: 20px;
+    transform: translateX(-170%);
+  }
+  .discover #slider .slide__container .slide img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover #slider .slide__container .slide:hover .card {
+    transform: translateX(-50%);
+  }
+  .discover__items {
+    height: 660vh;
+  }
+  .discover__items .cards {
+    width: 95%;
+    padding: 10px 0;
+  }
+  .discover__items .cards .card {
+    width: 100%;
+  }
+  .discover__items .cards .card .image {
+    width: 100%;
+  }
+  .discover__items .cards .card .image .nft {
+    width: 100%;
+    height: 230px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover__items .cards .card .info {
+    gap: 40px;
+  }
+  .discover__items .cards .double .images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .discover__items .cards .double .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .sellers {
+    height: 160vh;
+  }
+  .sellers__list {
+    max-width: 100%;
+  }
+  .sellers__list__profile {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 385px) {
+  .discover {
+    margin-top: 20px;
+  }
+  .discover__slide .buttons {
+    width: 98%;
+    top: 47%;
+  }
+  .discover #slider .slide__container {
+    width: 345px;
+    margin-right: 5px;
+  }
+  .discover #slider .slide__container .slide {
+    height: 500px;
+    width: 340px;
+  }
+  .discover #slider .slide__container .slide .card {
+    width: 220px;
+    height: 150px;
+    margin-top: 20px;
+    transform: translateX(-170%);
+  }
+  .discover #slider .slide__container .slide img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover #slider .slide__container .slide:hover .card {
+    transform: translateX(-50%);
+  }
+  .discover__items {
+    height: 730vh;
+  }
+  .discover__items .cards {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .discover__items .cards .card {
+    width: 100%;
+  }
+  .discover__items .cards .card .image {
+    width: 100%;
+  }
+  .discover__items .cards .card .image .nft {
+    width: 100%;
+    height: 230px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover__items .cards .card .info {
+    gap: 40px;
+  }
+  .discover__items .cards .double .images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .discover__items .cards .double .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .sellers {
+    height: 180vh;
+  }
+}
+@media (max-width: 360px) {
+  .discover__items {
+    height: 770vh;
+  }
 }/*# sourceMappingURL=explore.css.map */

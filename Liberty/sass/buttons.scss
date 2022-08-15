@@ -1,13 +1,11 @@
-@import 'colors';
+@import "colors";
 
 .btn {
-    cursor: pointer;
-    border: none;
-    position: relative;
-    transition: 0.2s;
-}
-
-.btn__primary {
+  cursor: pointer;
+  border: none;
+  position: relative;
+  transition: 0.2s;
+  &__primary {
     background-color: $purple;
     color: $white;
     height: 50px;
@@ -15,20 +13,18 @@
     font-weight: 500;
     position: relative;
     &:hover {
-        color: $purple;
-        background-color: $white;
+      color: $purple;
+      background-color: $white;
     }
-}
-
-.btn__secondary {
+  }
+  &__secondary {
     border-radius: 20px;
     font-weight: 500;
     &:hover {
-    background-color: $purple;
+      background-color: $purple;
     }
-}
-
-.btn__slide {
+  }
+  &__slide {
     height: 50px;
     width: 50px;
     background-color: $white;
@@ -39,14 +35,17 @@
     justify-content: center;
     transition: 0.3s ease-in-out;
     i {
-        color: $purple;
-        font-size: 18px;
+      color: $purple;
+      font-size: 18px;
     }
     &:hover {
-        background-color: $purple;
-        i{color: $white;}
+      background-color: $purple;
+      i {
+        color: $white;
+      }
     }
     &:focus {
-        outline-color: $purple;
+      outline-color: $purple;
     }
+  }
 }

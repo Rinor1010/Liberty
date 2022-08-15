@@ -1,0 +1,13 @@
+@import "colors";
+
+footer {
+  width: 100%;
+  height: 10vh;
+  padding: 0 20px;
+  background: url("./images/main-bg.jpg");
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

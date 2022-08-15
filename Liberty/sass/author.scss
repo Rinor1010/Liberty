@@ -1,0 +1,275 @@
+@import "colors";
+@import "buttons";
+@import "cards";
+@import "nav";
+@import "load";
+@import "header";
+@import "creatediv";
+@import "footer";
+
+.author {
+  width: 100%;
+  height: 150vh;
+  background: url("./images/dark-bg.jpg") no-repeat center center/cover;
+  padding: 50px 20px;
+  color: $white;
+  &__info {
+    margin: auto;
+    max-width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      img {
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+      }
+      &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        h3 {
+          font-size: 20px;
+        }
+        .acc {
+          color: $purple;
+        }
+      }
+    }
+    .card {
+      width: 450px;
+      height: 150px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      gap: 20px;
+      .likes,
+      .followers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        i {
+          font-size: 20px;
+          color: $purple;
+        }
+        h3 {
+          color: $purple;
+          span {
+            color: $white;
+          }
+        }
+      }
+      .followers {
+        h3 {
+          color: $lightgray;
+        }
+        button {
+          width: 60%;
+        }
+      }
+    }
+  }
+  &__items {
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    &__text {
+      display: flex;
+      gap: 15px;
+      flex-direction: column;
+      .line {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 160px;
+        height: 2px;
+        background-color: $purple;
+      }
+      h1 {
+        font-size: 32px;
+        span {
+          color: $purple;
+        }
+      }
+    }
+    .cards {
+      max-width: 100%;
+      margin: 60px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 35px;
+      .card {
+        left: 0;
+        width: 305px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 30px 20px;
+        .image {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          gap: 20px;
+          .authorimg {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            top: 45px;
+          }
+          .nft {
+            width: 240px;
+            height: 220px;
+            border-radius: 25px;
+          }
+          h3 {
+            font-size: 20px;
+          }
+        }
+        .line {
+          position: relative;
+          height: 1px;
+          width: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0.3;
+          margin: 15px 0 0 0;
+        }
+        .info {
+          display: flex;
+          justify-content: start;
+          gap: 50px;
+          margin: 25px 0;
+          h3 {
+            text-align: start;
+            font-size: 20px;
+          }
+        }
+        button {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          width: 140px;
+          height: 50px;
+          font-size: 16px;
+          bottom: 0%;
+          left: 50%;
+          transform: translate(-50%, 50%);
+          .line {
+            position: absolute;
+            width: calc(100% - 30px);
+            top: 31px;
+            left: 15px;
+            height: 3px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .author {
+    &__items {
+      width: 98%;
+      .cards {
+        .card {
+          width: 270px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .author {
+    height: 250vh;
+    &__items {
+      width: 90%;
+      .cards {
+        .card {
+          width: 315px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .author {
+    height: 370vh;
+    &__items {
+      width: 90%;
+      .cards {
+        .card {
+          width: 330px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .author {
+    height: 400vh;
+    &__items {
+      width: 90%;
+      .cards {
+        .card {
+          width: 290px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .author {
+    .card {
+      .followers {
+        button {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    height: 100vh;
+  }
+  .author {
+    height: 460vh;
+    &__info {
+      .profile {
+        width: 100%;
+        img {
+          height: 100px;
+          width: 100px;
+        }
+      }
+      .card {
+        height: 220px;
+        .followers {
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

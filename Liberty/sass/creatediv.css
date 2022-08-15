@@ -1,0 +1,117 @@
+.create {
+  width: 100%;
+  height: 75vh;
+  padding: 50px 20px;
+  color: rgb(253, 254, 252);
+  background: url("./images/main-bg.jpg") center center/cover;
+}
+.create__text {
+  width: 85%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.create__text button {
+  width: 200px;
+  font-size: 16px;
+}
+.create__text .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.create__text .left h1 {
+  font-size: 28px;
+}
+.create__text .left .line {
+  position: relative;
+  left: 0;
+  height: 2px;
+  width: 150px;
+}
+.create__div {
+  max-width: 85%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.create__nft {
+  display: flex;
+  gap: 30px;
+}
+.create__nft:nth-child(1) {
+  flex-direction: column;
+}
+.create__nft .icons {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(253, 254, 252);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.create__nft p {
+  line-height: 1.6;
+}
+.create__nft .create__line {
+  display: flex;
+  flex-direction: column;
+}
+.create__nft .create__line .line {
+  position: relative;
+  margin-left: -10px;
+  width: 1px;
+  height: 100%;
+  opacity: 0.5;
+  background-color: rgb(253, 254, 252);
+}
+.create__nft .create__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .create {
+    height: 140vh;
+    gap: 50px;
+  }
+  .create__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .create__text .left .line {
+    margin: auto;
+  }
+  .create__div {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+}
+@media (max-width: 800px) {
+  .create {
+    height: 150vh;
+  }
+}
+@media (max-width: 428px) {
+  .create {
+    height: 200vh;
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .create__text {
+    width: 100%;
+  }
+}
+@media (max-width: 380px) {
+  .create {
+    height: 240vh;
+  }
+}/*# sourceMappingURL=creatediv.css.map */
